@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIFA World Cup 2026 | Blog & Live Hub</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Glow Effects -->
+    <div class="glow-bg">
+        <div class="glow-sphere sphere-1"></div>
+        <div class="glow-sphere sphere-2"></div>
+        <div class="glow-sphere sphere-3"></div>
+    </div>
+
+    <!-- Main Shell -->
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        <path d="M2 12h20"></path>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>FWC <span>2026</span></h1>
+                    <small>United Hub</small>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#/dashboard" class="nav-item active" data-tab="dashboard">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+                        <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+                        <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+                        <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+                    </svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#/standings" class="nav-item" data-tab="standings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 20V10"></path>
+                        <path d="M18 20V4"></path>
+                        <path d="M6 20V14"></path>
+                    </svg>
+                    <span>Standings</span>
+                </a>
+                <a href="#/schedule" class="nav-item" data-tab="schedule">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Schedule</span>
+                </a>
+                <a href="#/venues" class="nav-item" data-tab="venues">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>Host Cities</span>
+                </a>
+                <a href="#/blog" class="nav-item" data-tab="blog">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <path d="M16 8h2"></path>
+                        <path d="M16 12h2"></path>
+                        <path d="M16 16h2"></path>
+                        <path d="M6 8h6v8H6z"></path>
+                    </svg>
+                    <span>Latest News</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button class="sound-toggle" id="btn-sound-toggle" title="Toggle Sound Effects">
+                    <svg id="icon-sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                    </svg>
+                    <svg id="icon-sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="hidden">
+                        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                        <line x1="23" y1="9" x2="17" y2="15"></line>
+                        <line x1="17" y1="9" x2="23" y2="15"></line>
+                    </svg>
+                    <span>UI Sounds</span>
+                </button>
+                <div class="tournament-badge">
+                    <span class="pulse-dot"></span>
+                    <span>Live World Cup Day 6</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="content-wrapper">
+            <!-- Topbar Header -->
+            <header class="topbar">
+                <div class="search-bar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="global-search" placeholder="Search matches, venues, teams...">
+                </div>
+
+                <div class="header-actions">
+                    <div class="ticker-wrap">
+                        <div class="ticker" id="live-ticker">
+                            <span>🇺🇸 USA 3 - 1 AUS 🇦🇺 (FT)</span>
+                            <span>🇲🇽 MEX 2 - 1 RSA 🇿🇦 (FT)</span>
+                            <span>🇮🇷 IRN 1 - 1 NZL 🇳🇿 (74')</span>
+                            <span>🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG 0 - 0 GHA 🇬🇭 (15')</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="btn-open-writer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14"></path>
+                            <path d="M5 12h14"></path>
+                        </svg>
+                        Write Article
+                    </button>
+                </div>
+            </header>
+
+            <!-- Tab Panels -->
+            <main class="main-content">
+                <!-- Dashboard Tab -->
+                <section id="dashboard" class="tab-pane active">
+                    <!-- Hero Widget -->
+                    <div class="dashboard-hero">
+                        <div class="hero-overlay"></div>
+                        <div class="hero-content">
+                            <span class="hero-tag">FIFA World Cup 2026</span>
+                            <h2 class="hero-title">United Across North America</h2>
+                            <p class="hero-desc">Experience the historic 48-team tournament live from USA, Canada, and Mexico. Keep track of live scores, standings, and exclusive updates.</p>
+                            <div class="hero-stats">
+                                <div class="hero-stat-card">
+                                    <h3>48</h3>
+                                    <span>Teams</span>
+                                </div>
+                                <div class="hero-stat-card">
+                                    <h3>16</h3>
+                                    <span>Cities</span>
+                                </div>
+                                <div class="hero-stat-card">
+                                    <h3>104</h3>
+                                    <span>Matches</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Dashboard Grid Layout -->
+                    <div class="dashboard-grid">
+                        <!-- Left Column: Live Matches -->
+                        <div class="grid-card live-matches-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Live Match Center</h3>
+                                <span class="badge badge-live">Simulated Live</span>
+                            </div>
+                            <div class="live-matches-container" id="live-matches-list">
+                                <!-- Rendered dynamically by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Quick Standings -->
+                        <div class="grid-card quick-standings-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Quick Standings</h3>
+                                <div class="group-select-wrapper">
+                                    <select id="quick-group-select" class="form-control">
+                                        <option value="A">Group A</option>
+                                        <option value="B">Group B</option>
+                                        <option value="C">Group C</option>
+                                        <option value="D">Group D</option>
+                                        <option value="E">Group E</option>
+                                        <option value="F">Group F</option>
+                                        <option value="G" selected>Group G</option>
+                                        <option value="H">Group H</option>
+                                        <option value="I">Group I</option>
+                                        <option value="J">Group J</option>
+                                        <option value="K">Group K</option>
+                                        <option value="L">Group L</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="quick-table-container">
+                                <table class="table" id="quick-standings-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Team</th>
+                                            <th class="txt-center">P</th>
+                                            <th class="txt-center">GD</th>
+                                            <th class="txt-center">PTS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="quick-standings-body">
+                                        <!-- Rendered dynamically by JS -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Grid Section: Featured News -->
+                    <div class="featured-news-section">
+                        <div class="section-title-wrap">
+                            <h3 class="section-title">Trending Stories</h3>
+                            <a href="#/blog" class="link-btn">View All News</a>
+                        </div>
+                        <div class="news-slider-grid" id="trending-articles-grid">
+                            <!-- Rendered dynamically by JS -->
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Standings Tab -->
+                <section id="standings" class="tab-pane">
+                    <div class="tab-header-banner">
+                        <h2>Tournament Standings</h2>
+                        <p>Track the complete standings for all 48 teams competing across Groups A to L. The top two teams and the eight best third-placed teams will qualify for the Round of 32.</p>
+                    </div>
+
+                    <!-- Group Selector Buttons Grid -->
+                    <div class="group-grid-selector" id="group-buttons-container">
+                        <!-- JavaScript will generate buttons A through L -->
+                    </div>
+
+                    <!-- Full Group Table -->
+                    <div class="grid-card standings-table-card">
+                        <div class="card-header">
+                            <h3 class="card-title" id="standings-group-title">Group A Standings</h3>
+                            <div class="legend">
+                                <span class="legend-item"><span class="legend-dot dot-q"></span> Advancing (Top 2)</span>
+                                <span class="legend-item"><span class="legend-dot dot-p"></span> Potential (Best 3rd)</span>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table full-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 50px;">Pos</th>
+                                        <th>Team</th>
+                                        <th class="txt-center">Played</th>
+                                        <th class="txt-center">Won</th>
+                                        <th class="txt-center">Drawn</th>
+                                        <th class="txt-center">Lost</th>
+                                        <th class="txt-center">GF</th>
+                                        <th class="txt-center">GA</th>
+                                        <th class="txt-center">GD</th>
+                                        <th class="txt-center">Points</th>
+                                        <th>Form</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="full-standings-body">
+                                    <!-- Rendered dynamically by JS -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Schedule Tab -->
+                <section id="schedule" class="tab-pane">
+                    <div class="tab-header-banner">
+                        <h2>Match Center & Schedule</h2>
+                        <p>Complete schedule, results, and details for all 104 matches. Filter by team, venue, group, or status.</p>
+                    </div>
+
+                    <!-- Schedule Filters -->
+                    <div class="schedule-filters-card grid-card">
+                        <div class="filters-row">
+                            <div class="filter-group">
+                                <label for="filter-stage">Stage</label>
+                                <select id="filter-stage" class="form-control">
+                                    <option value="all">All Stages</option>
+                                    <option value="group">Group Stage</option>
+                                    <option value="live">Live Matches</option>
+                                    <option value="completed">Completed Results</option>
+                                    <option value="upcoming">Upcoming Fixtures</option>
+                                </select>
+                            </div>
+                            <div class="filter-group">
+                                <label for="filter-venue">Stadium / Venue</label>
+                                <select id="filter-venue" class="form-control">
+                                    <option value="all">All Venues</option>
+                                    <!-- Populated dynamically -->
+                                </select>
+                            </div>
+                            <div class="filter-group flex-grow">
+                                <label for="filter-search">Search Team</label>
+                                <input type="text" id="filter-search" class="form-control" placeholder="e.g. USA, Brazil, England...">
+                            </div>
+                            <div class="filter-group-actions">
+                                <button class="btn btn-secondary" id="btn-reset-filters">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Matches Timeline Grid -->
+                    <div class="schedule-timeline" id="schedule-matches-list">
+                        <!-- JavaScript will generate match timeline by dates -->
+                    </div>
+                </section>
+
+                <!-- Venues Tab -->
+                <section id="venues" class="tab-pane">
+                    <div class="tab-header-banner">
+                        <h2>Host Cities & Venues</h2>
+                        <p>Explore the 16 host cities across Canada, Mexico, and the United States that are hosting the 2026 World Cup matches.</p>
+                    </div>
+
+                    <div class="venues-grid" id="venues-cards-grid">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+                </section>
+
+                <!-- Blog Tab -->
+                <section id="blog" class="tab-pane">
+                    <div class="tab-header-banner">
+                        <h2>World Cup Newsroom</h2>
+                        <p>Get the latest news, detailed tactical analysis, venue spotlights, and match reports from our team of sports journalists.</p>
+                    </div>
+
+                    <!-- Blog Categories and Search -->
+                    <div class="blog-controls">
+                        <div class="blog-categories" id="blog-category-filters">
+                            <button class="category-btn active" data-category="all">All Stories</button>
+                            <button class="category-btn" data-category="Match Reports">Match Reports</button>
+                            <button class="category-btn" data-category="News">Breaking News</button>
+                            <button class="category-btn" data-category="Team Analysis">Team Analysis</button>
+                            <button class="category-btn" data-category="Venue Spotlights">Venue Spotlights</button>
+                        </div>
+                    </div>
+
+                    <!-- Articles Grid -->
+                    <div class="articles-grid" id="blog-articles-grid">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- MODAL: Article Reader -->
+    <div class="modal-overlay" id="modal-article">
+        <div class="modal-card modal-large">
+            <button class="modal-close-btn" id="btn-close-article-modal">&times;</button>
+            <div class="modal-header-image" id="article-modal-img"></div>
+            <div class="modal-body">
+                <div class="article-meta-row">
+                    <span class="badge" id="article-modal-category">Category</span>
+                    <span class="article-date" id="article-modal-date">Date</span>
+                    <span class="article-author" id="article-modal-author">By Author</span>
+                </div>
+                <h2 class="modal-title" id="article-modal-title">Article Title</h2>
+                <div class="article-content-body" id="article-modal-content">
+                    <!-- Dynamic Text -->
+                </div>
+                <div class="article-likes-row">
+                    <button class="btn-like" id="btn-like-article">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        <span id="article-modal-likes">412</span> Likes
+                    </button>
+                    <div class="article-tags" id="article-modal-tags">
+                        <!-- tags -->
+                    </div>
+                </div>
+
+                <hr class="modal-divider">
+
+                <!-- Comments Section -->
+                <div class="comments-section">
+                    <h3>Discussion (<span id="article-comments-count">0</span>)</h3>
+                    <div class="comments-list" id="article-comments-list">
+                        <!-- list of comments -->
+                    </div>
+                    
+                    <form class="comment-form" id="form-submit-comment">
+                        <h4>Join the Discussion</h4>
+                        <div class="form-row">
+                            <input type="text" id="comment-author" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-row">
+                            <textarea id="comment-text" class="form-control" rows="3" placeholder="Write a professional comment..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Post Comment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Write Blog Post -->
+    <div class="modal-overlay" id="modal-writer">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="btn-close-writer-modal">&times;</button>
+            <div class="modal-body">
+                <h2 class="modal-title">Publish World Cup Story</h2>
+                <p class="modal-subtitle">Share your live updates, match analysis, or reporter insights. Your article will be immediately published to the Newsroom feed.</p>
+                
+                <form id="form-publish-article">
+                    <div class="form-row">
+                        <label for="post-title">Article Title</label>
+                        <input type="text" id="post-title" class="form-control" placeholder="Enter article headline..." required>
+                    </div>
+                    <div class="form-row-grid">
+                        <div class="form-row">
+                            <label for="post-author">Author Name</label>
+                            <input type="text" id="post-author" class="form-control" placeholder="Journalist Name" required>
+                        </div>
+                        <div class="form-row">
+                            <label for="post-category">Category</label>
+                            <select id="post-category" class="form-control" required>
+                                <option value="News">Breaking News</option>
+                                <option value="Match Reports">Match Report</option>
+                                <option value="Team Analysis">Team Analysis</option>
+                                <option value="Venue Spotlights">Venue Spotlight</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label>Select Cover Image</label>
+                        <div class="cover-image-options">
+                            <label class="img-opt-label">
+                                <input type="radio" name="post-image" value="assets/hero.png" checked>
+                                <span class="img-opt-preview img-opt-hero">Futuristic Stadium</span>
+                            </label>
+                            <label class="img-opt-label">
+                                <input type="radio" name="post-image" value="assets/trophy.png">
+                                <span class="img-opt-preview img-opt-trophy">World Cup Trophy</span>
+                            </label>
+                            <label class="img-opt-label">
+                                <input type="radio" name="post-image" value="assets/fans.png">
+                                <span class="img-opt-preview img-opt-fans">Fans Celebrating</span>
+                            </label>
+                            <label class="img-opt-label">
+                                <input type="radio" name="post-image" value="assets/stadium.png">
+                                <span class="img-opt-preview img-opt-stadium">LA Stadium Exterior</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <label for="post-summary">Article Summary (Short Description)</label>
+                        <input type="text" id="post-summary" class="form-control" placeholder="Enter a brief 1-2 sentence preview..." required>
+                    </div>
+                    <div class="form-row">
+                        <label for="post-content">Article Content (Markdown or plain text)</label>
+                        <textarea id="post-content" class="form-control" rows="8" placeholder="Write full article body here..." required></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label for="post-tags">Tags (comma-separated)</label>
+                        <input type="text" id="post-tags" class="form-control" placeholder="e.g. WorldCup, FIFA, England, Goals">
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="btn-cancel-writer">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Publish Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Venue Explorer -->
+    <div class="modal-overlay" id="modal-venue">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="btn-close-venue-modal">&times;</button>
+            <div class="modal-header-image" id="venue-modal-img"></div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="venue-modal-title">Venue Title</h2>
+                <div class="venue-info-grid">
+                    <div class="venue-info-item">
+                        <small>Host City</small>
+                        <p id="venue-modal-city">City, Country</p>
+                    </div>
+                    <div class="venue-info-item">
+                        <small>Capacity</small>
+                        <p id="venue-modal-capacity">70,000</p>
+                    </div>
+                </div>
+                
+                <hr class="modal-divider">
+                
+                <h3>Matches Scheduled at this Venue</h3>
+                <div class="modal-matches-list" id="venue-modal-matches">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
